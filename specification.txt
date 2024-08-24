@@ -1,0 +1,24 @@
+HTML Tags:
+1. <body> - it's like the main part of the website
+2. <header> - I used this for the top banner thingy
+3. <h1> - main heading inside the header
+4. <nav> - this is where the menu goes
+5. <ul> - for making a list in the menu
+6. <li> - each item in the list
+7. <a> - links for navigation
+8. <main> - central area of the site content
+9. <section> - I used this to group the content in the main area
+10. <footer> - bottom part of the page
+
+CSS Properties:
+1. font-family - used this to make all the text look the same
+2. background-color - sets background colors, like for the header and footer
+3. padding - adds space inside boxes to not squash stuff together
+4. margin - adds space outside boxes for better spacing
+5. box-shadow - gives a shadow effect to sections, makes it look cool
+
+JavaScript:
+Added some simple code to toggle the nav menu on mobile. Makes the menu show up when you click a button.
+
+Bootstrap:
+Used bootstrap to help with the responsive layout. Just added a link to it in the head and used the container class for the main area.
