@@ -40,11 +40,14 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a.active {
     color: #3498db;
+    background-color: #fff;
 }
 
 main {
