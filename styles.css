@@ -6,24 +6,24 @@ body {
     margin: 0;
     padding: 0;
 }
-
+    
 header {
     background-color: #3498db;
     color: #fff;
     text-align: center;
     padding: 1rem;
 }
-
+    
 header h1 {
     margin: 0;
     font-size: 2.5rem;
 }
-
+    
 nav {
     background-color: #2c3e50;
     padding: 0.5rem;
 }
-
+    
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -31,31 +31,28 @@ nav ul {
     display: flex;
     justify-content: center;
 }
-
+    
 nav ul li {
     margin: 0 10px;
 }
-
+    
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    padding: 10px 15px;
-    border-radius: 5px;
+    transition: color 0.3s ease;
 }
-
-nav ul li a:hover, nav ul li a.active {
+    
+nav ul li a:hover {
     color: #3498db;
-    background-color: #fff;
 }
-
+    
 main {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
 }
-
+    
 section {
     background-color: #fff;
     border-radius: 5px;
@@ -63,13 +60,13 @@ section {
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
+    
 h2 {
     color: #2c3e50;
     border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
 }
-
+    
 footer {
     background-color: #34495e;
     color: #fff;
@@ -79,32 +76,32 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
+    
 code {
     font-family: 'Courier New', Courier, monospace;
     background-color: #f1f1f1;
     padding: 2px 5px;
     border-radius: 3px;
 }
-
+    
 pre {
     background-color: #f1f1f1;
     padding: 15px;
     border-radius: 5px;
     overflow-x: auto;
 }
-
+    
 @media (max-width: 600px) {
     header h1 {
-        font-size: 2rem;
+    font-size: 2rem;
     }
-
+    
     nav ul {
-        flex-direction: column;
-        align-items: center;
+    flex-direction: column;
+    align-items: center;
     }
-
+    
     nav ul li {
-        margin: 5px 0;
+    margin: 5px 0;
     }
 }
