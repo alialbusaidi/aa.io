@@ -62,3 +62,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return lines.join('\n');
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const copyButton = document.getElementById('copyButton');
+    const codeBlock = document.querySelector('pre code');
+
+    copyButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+            alert('Code copied to clipboard!');
+        }).catch(err => {
+            alert('Failed to copy code: ', err);
+        });
+    });
+});
