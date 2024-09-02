@@ -1,30 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One:wght@400&family=Roboto:wght@400&display=swap');
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --background-color: #ecf0f1;
+    --text-color: #333;
+    --header-font: 'Poppins', sans-serif;
+    --body-font: 'Poppins', sans-serif;
+    --handwriting-font: 'Indie Flower', cursive;
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--body-font);
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: var(--text-color);
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 header {
-    background-color: #3498db;
+    background-color: var(--primary-color);
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem 0;
 }
 
 header h1 {
-    font-family: "Nerko One", cursive;
+    font-family: var(--handwriting-font);
     margin: 0;
     font-size: 2.5rem;
 }
 
+.animated-title {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subtitle {
+    font-family: var(--handwriting-font);
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
 nav {
-    background-color: #2c3e50;
-    padding: 0.5rem;
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
 }
 
 nav ul {
@@ -36,7 +72,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -44,200 +80,31 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
-nav ul li a:hover {
-    color: #3498db;
+nav ul li a i {
+    margin-right: 5px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--accent-color);
 }
 
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
+    margin: 40px auto;
 }
 
 section {
     background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
+section:hover {
+    transform: translateY(-5px);
 }
-
-footer {
-    background-color: #34495e;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-code {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #f1f1f1;
-    padding: 2px 5px;
-    border-radius: 3px;
-}
-
-pre {
-    background-color: #f1f1f1;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    main {
-        padding: 0 10px;
-    }
-}
-
-/* Poetry Generator Styles */
-#poetry-generator {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    text-align: center;
-}
-
-.poetry-container {
-    margin-bottom: 20px;
-}
-
-#keywordInput {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 80%;
-    font-size: 1rem;
-    margin-right: 10px;
-}
-
-#generatePoem {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-#generatePoem:hover {
-    background-color: #2980b9;
-}
-
-#poemOutput {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#poemOutput h3 {
-    margin-bottom: 10px;
-    color: #2c3e50;
-}
-
-#poem {
-    font-family: 'Georgia', serif;
-    font-size: 1.2rem;
-    white-space: pre-wrap;
-}
-
-/* Binary Converter Styles */
-#binary-converter {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-.converter-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-.converter-section {
-    flex: 1 1 45%;
-    display: flex;
-    flex-direction: column;
-}
-
-.converter-section label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.converter-section textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
-    min-height: 100px;
-    resize: vertical;
-}
-
-/* Code Page Styles */
-#python-poem {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-#python-poem h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #34495e;
-}
-
-#python-poem pre {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    overflow-x: auto;
-}
-
-#copyButton {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor:

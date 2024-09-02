@@ -1,73 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code - Ali Al-Busaidi</title>
-    <link href="styles.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Art in Code: The Poetry of Logic</h1>
+        <div class="container">
+            <h1 class="animated-title">Art in Code: The Poetry of Logic</h1>
+        </div>
     </header>
+
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="words.html">Words</a></li>
-            <li><a href="numbers.html">Numbers</a></li>
-            <li><a href="code.html">Code</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="words.html"><i class="fas fa-book"></i> Words</a></li>
+                <li><a href="numbers.html"><i class="fas fa-calculator"></i> Numbers</a></li>
+                <li><a href="code.html" class="active"><i class="fas fa-code"></i> Code</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-        <article id="code-intro">
-            <h2>Art Encoded</h2>
+
+    <main class="container">
+        <section id="art-encoded">
+            <h2><i class="fas fa-paintbrush"></i> Art Encoded</h2>
             <p>Coding is where logic meets creativity. It's a form of expression, a way to bring ideas to life through the language of computers.</p>
-        </article>
-        <aside id="python-poem">
-            <h2>while True: live() <span class="highlight">#A Python Poem</span></h2>
-            <h4>Story coded by Ali Al-Busaidi</h4>
-            <pre><code class="python">
-            from external import Truth
+        </section>
 
-            def search(self, goal):
-                if find(Truth):
-                    return True
-                else:
-                    return search(self, goal)
+        <section id="python-poem">
+            <h2><i class="fab fa-python"></i> while True: live() <span class="highlight">A Python Poem</span></h2>
+            <p>Story coded by Ali Al-Busaidi</p>
+            <pre><code class="language-python">
+from external import Truth
 
-            def live():
-                for life in range(0, max_value):
-                    if user < max_value:
-                        meaning = search(user, goal)
-                        if meaning:
-                            return True
-                        else:
-                            return search(meaning, goal)
-                    elif user == max:
-                        break
+def search(self, goal):
+    if find(Truth):
+        return True
+    else:
+        return search(self, goal)
 
-            user = 0.0
-            max_value = float(input("God: "))
-            goal = input("User: ")
+def live():
+    for life in range(0, max_value):
+        if user < max_value:
+            meaning = search(user, goal)
+            if meaning:
+                return True
+            else:
+                return search(meaning, goal)
+        elif user == max:
+            break
 
-            def main():
-                while True:
-                    live()
+user = 0.0
+max_value = float(input("God: "))
+goal = input("User: ")
 
-            main()
+def main():
+    while True:
+        live()
 
-            # A Python Poem by Ali Al-Busaidi
-            # alialbusaidi.io
+main()
+
+# A Python Poem by Ali Al-Busaidi
+# alialbusaidi.io
             </code></pre>
             <button id="copyButton">Copy Code</button>
-        </aside>
+        </section>
     </main>
+
     <footer>
-        <p>© 2024 Ali Al Busaidi. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Ali Al Busaidi. All rights reserved.</p>
+        </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <script src="script.js"></script>
+    <script src="code-copy.js"></script>
 </body>
 </html>
