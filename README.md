@@ -5,8 +5,9 @@ This is the repository for **my personal website**—a simple static site create
 ## Website Structure
 
 - **index.html**: Home page
-- **about.html**: About page
-- **contact.html**: Contact page
+- **words.html**: creative writing, LLMs, bot, blogs, etc
+- **numbers.html**: Statistics, self quantification, data, etc
+- **code.html**: AI machine learning, plug ins, etc
 - **styles.css**: Site styling
 
 ## View the Site
